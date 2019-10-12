@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 
-import Navbar from '../components/Navbar'
-
 export default class Login extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        Login
+        <h1 className="title">Login</h1>
       </div>
     )
   }

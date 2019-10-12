@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 
-import Navbar from '../../components/Navbar'
-
 export default class Internships extends Component {
   state = {
     formdata: {
@@ -33,8 +31,9 @@ export default class Internships extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        Internships {this.state.filterFields.city && ` in ${this.state.filterFields.city}`}
+        <h1 className="title">
+          Internships {this.state.filterFields.city && ` in ${this.state.filterFields.city}`}
+        </h1>
       </div>
     )
   }

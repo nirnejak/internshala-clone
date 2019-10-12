@@ -3,8 +3,6 @@ import Select from 'react-select'
 
 import { withRouter } from 'react-router-dom';
 
-import Navbar from '../components/Navbar'
-
 import HeroImage from '../assets/hero.png'
 
 class Home extends Component {
@@ -36,8 +34,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="hero is-fullheight">
-          <Navbar />
+        <div className="hero is-fullheight-with-navbar">
           {/* <div className="hero-head text-center">Head</div> */}
           <div className="hero-body">
             <div className="container">

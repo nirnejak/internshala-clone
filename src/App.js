@@ -9,12 +9,16 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
+import Navbar from './components/Navbar'
+
 import './App.scss';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App" >
+        <Navbar />
+
         <Router>
           <Switch>
             <Route path="/" exact component={Home} />
