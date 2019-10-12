@@ -11,7 +11,7 @@ export default class Navbar extends Component {
             <h1 className="is-size-4">InternSpace</h1>
           </Link>
 
-          <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="internSpaceNavbar">
+          <a href="#" role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="internSpaceNavbar">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
