@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
+import Navbar from '../components/Navbar'
 
-import Navbar from '../../components/Navbar'
-
-export default class Internships extends Component {
+export default class Contact extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        Internships
       </div>
     )
   }

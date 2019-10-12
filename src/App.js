@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Internships from './pages/Internships'
+import Contact from './pages/Contact';
 
-import Navbar from './components/Navbar'
+import Login from './pages/Login';
 
 import './App.scss';
 
@@ -14,18 +15,12 @@ class App extends React.Component {
     return (
       <div className="App" >
         <Router>
-          <Navbar />
-
           <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/internships">
-              <Internships />
-            </Route>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/internships" component={Internships} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/login" component={Login} />
           </Switch>
         </Router>
       </div>
