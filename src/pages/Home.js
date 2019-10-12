@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 
 import Navbar from '../components/Navbar'
 
+import HeroImage from '../assets/hero.png'
+
 class Home extends Component {
   state = {
     cities: [
@@ -12,6 +14,7 @@ class Home extends Component {
       { label: 'Hyderabad', value: 'hyderabad' },
       { label: 'Pune', value: 'pune' },
       { label: 'Mumbai', value: 'mumbai' },
+      { label: 'Delhi', value: 'delhi' },
     ]
   }
 
@@ -38,10 +41,10 @@ class Home extends Component {
           {/* <div className="hero-head text-center">Head</div> */}
           <div className="hero-body">
             <div className="container">
-              <div className="row">
-                <div className="column is-one-third">
+              <div className="columns is-vcentered">
+                <div className="column is-4">
                   <h1 className="title has-text-primary">Find the best internships</h1>
-                  <h2 className="subtitle">lorem ipsum dolor set amet</h2>
+                  <h2 className="subtitle">kickstart your career with best internships in the country</h2>
                   <br />
                   <Select
                     placeholder="Select City..."
@@ -55,11 +58,29 @@ class Home extends Component {
                     Search Internships
                   </button>
                 </div>
+                <div className="column is-6 is-offset-2">
+                  <img
+                    src={HeroImage}
+                    alt="Girl Working"
+                    style={{ filter: 'hue-rotate(270deg)', }}
+                  />
+                </div>
               </div>
             </div>
           </div>
-          {/* <div className="hero-foot">Foot</div> */}
+          <div className="hero-foot has-text-centered bounce-animation">
+            <i className="fas fa-chevron-down" />
+            <br />
+            <i
+              className="fas fa-chevron-down"
+              style={{
+                position: 'relative',
+                top: '-17px'
+              }}
+            />
+          </div>
         </div>
+
         <div className="hero is-large is-primary is-bold">
           <div className="hero-body">
             <div className="container">

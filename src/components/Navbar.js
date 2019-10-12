@@ -44,6 +44,9 @@ export default class Navbar extends Component {
                 <Link className="navbar-item" to="/internships/mumbai">
                   Mumbai
                 </Link>
+                <Link className="navbar-item" to="/internships/delhi">
+                  Delhi
+                </Link>
                 <hr className="navbar-divider" />
                 <Link className="navbar-item" to="/internships/international">
                   International

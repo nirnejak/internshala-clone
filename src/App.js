@@ -7,6 +7,7 @@ import Internships from './pages/Internships'
 import Contact from './pages/Contact';
 
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 import './App.scss';
 
@@ -18,9 +19,13 @@ class App extends React.Component {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/internships" component={Internships} />
+            <Route path="/internships/:city" component={Internships} />
+            <Route path="/internships/" component={Internships} />
             <Route path="/contact" component={Contact} />
+
+            {/* Auth Routes */}
             <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
           </Switch>
         </Router>
       </div>
