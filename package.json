@@ -1,0 +1,19 @@
+{
+  "name": "internshala-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirnejak/internshala-clone.git"
+  },
+  "author": "Jitendra Nirnejak <jeetnirnejak@gmail.com> (https://nirnejak.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nirnejak/internshala-clone/issues"
+  },
+  "homepage": "https://github.com/nirnejak/internshala-clone#readme"
+}
