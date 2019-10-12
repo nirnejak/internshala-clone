@@ -2,6 +2,27 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 
 export default class Navbar extends Component {
+  componentDidMount() {
+    this.addNavbarToggleListener()
+  }
+
+  addNavbarToggleListener = () => {
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  }
+
   render() {
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -11,7 +32,7 @@ export default class Navbar extends Component {
             <h1 className="is-size-4">InternSpace</h1>
           </Link>
 
-          <a href="#" role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="internSpaceNavbar">
+          <a href="#" role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="true" data-target="internSpaceNavbar">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
