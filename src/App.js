@@ -1,9 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
 import About from './pages/About'
 import Internships from './pages/Internships'
+
+import Navbar from './components/Navbar'
 
 import './App.scss';
 
@@ -12,9 +14,7 @@ class App extends React.Component {
     return (
       <div className="App" >
         <Router>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/internships">Internships</Link>
+          <Navbar />
 
           <Switch>
             <Route path="/" exact>
