@@ -1,29 +1,35 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
 
+import { withRouter } from 'react-router-dom';
+
 import Navbar from '../components/Navbar'
 
-export default class Home extends Component {
+class Home extends Component {
   state = {
     cities: [
-      {
-        label: 'Bangalore',
-        value: 'bangalore'
-      },
-      {
-        label: 'Hyderabad',
-        value: 'hyderabad'
-      },
-      {
-        label: 'Pune',
-        value: 'pune'
-      },
-      {
-        label: 'Mumbai',
-        value: 'mumbai'
-      },
+      { label: 'Bangalore', value: 'bangalore' },
+      { label: 'Hyderabad', value: 'hyderabad' },
+      { label: 'Pune', value: 'pune' },
+      { label: 'Mumbai', value: 'mumbai' },
     ]
   }
+
+  inputEventHandler = (event, field) => {
+    if (field === 'city') {
+      this.setState({
+        ...this.state,
+        selectedCity: event.value
+      })
+    }
+  }
+
+  navigatePage = link => {
+    if (link === 'internships') {
+      this.props.history.push(`internships/${this.state.selectedCity || ''}`)
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -36,10 +42,16 @@ export default class Home extends Component {
                 <div className="column is-one-third">
                   <h1 className="title has-text-primary">Find the best internships</h1>
                   <h2 className="subtitle">lorem ipsum dolor set amet</h2>
-                  <br/>
-                  <Select options={this.state.options} placeholder="Select City..." className="w-50" />
                   <br />
-                  <button className="button is-primary is-medium">
+                  <Select
+                    placeholder="Select City..."
+                    className="w-50"
+                    required={true}
+                    options={this.state.cities}
+                    onChange={e => this.inputEventHandler(e, 'city')}
+                  />
+                  <br />
+                  <button className="button is-primary is-medium" onClick={e => this.navigatePage('internships')}>
                     Search Internships
                   </button>
                 </div>
@@ -60,3 +72,6 @@ export default class Home extends Component {
     )
   }
 }
+
+
+export default withRouter(Home)
